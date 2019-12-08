@@ -34,8 +34,6 @@ public class PlayerController : MonoBehaviour
             rigidbody.AddForce(transform.right * key * WalkSpeed);
         }
 
-
-
         if (Input.GetKeyDown(KeyCode.W) && isGround == true)
         {
             rigidbody.AddForce(transform.up * JumpForce);
