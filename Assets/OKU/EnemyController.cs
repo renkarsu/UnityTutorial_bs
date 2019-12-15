@@ -33,7 +33,7 @@ public class EnemyController : MonoBehaviour
                 break;
         }
 
-        if (MoveRange >= 5) Key = 0;
+        if (MoveRange >= MaxMoveRange) Key = 0;
         if (MoveRange <= 0) Key = 1;
 
         gameObject.transform.position = Enemy_pos;
