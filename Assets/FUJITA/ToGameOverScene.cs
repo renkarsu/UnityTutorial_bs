@@ -6,20 +6,20 @@ using UnityEngine.SceneManagement;
 public class toGameOverScene : MonoBehaviour
 {
     GameObject player;
-    PlayerController playerControllerScript;
+    PlayerHitpoint playerHitpointScript;
     bool gameOverFlag;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("player");
-        playerControllerScript = player.GetComponent<PlayerController>();
+        playerHitpointScript = player.GetComponent<PlayerHitpoint>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameOverFlag = playerControllerScript.GameOverFlag;
+        gameOverFlag = playerHitpointScript.GameOverFlag;
         if (gameOverFlag)
         {
             SceneManager.LoadScene("gameOverScene");
